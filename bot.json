@@ -1,0 +1,68 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Merhaba", "Nasılsın", "Selam", "Sa", "İyi günler"],
+         "responses": ["Merhaba, teşekkürler", "Seni yeniden görmek güzel", "Selam, nasıl yardımcı olabilirim?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Görüşürüz", "Sonra görüşürüz", "Seninle konuşmak güzeldi, görüşürüz", "bye"],
+         "responses": ["Görüşürüz!", "İyi günler", "Bir sonraki sefere görüşmek üzere"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Teşekkürler", "Teşekkür ederim", "Çok yardımcı oldun", "Güzel, teşekkürler", "Yardım ettiğin için teşekkürler"],
+         "responses": ["Yardımcı olabildiysem ne mutlu", "Ne zaman istersen", "Benim için zevkti"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Üzgünüm, seni anlayamadım", "lütfen daha da açıklayıcı olur musun", "Anladığımdan emin değilim"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["Bana nasıl yardımcı olabilirsin?", "Benim için ne yapabilirsin", "Bana nasıl yardım edebilirsin?", "Bana yardım etmelisin?", "Yardımına ihtiyacım var"],
+         "responses": ["Ürün iadesi", "ürün tanıtımı", "müşteri hizmetleri", "kargo takibi", "ürün iptali"],
+         "context": [""]
+        },
+        {"tag": "ürün_iadesi",
+         "patterns": ["satın aldığım ürünü nasıl iade edebilirim", "iade işlemleri için neler yapmam gerekiyor?", "ürün iade edecektim", "ürün iade süresi ne kadar?", "iade için hangi kargo şirketini kullanmam gerekiyor" ],
+         "responses": ["iade hizmetlerine bağlanılıyor"],
+         "context": [""]
+        },
+        {"tag": "müşteri_hizmetleri",
+         "patterns": ["Müşteri hizmetleri ile görüşmek istiyorum", "Biri ile görüşmek istiyorum", "Konuşabileceğim birini istiyorum", "Müşteri hizmetlerine bağlanmak istiyorum"],
+         "responses": ["Müşteri hizmetlerine bağlanılıyor"],
+         "context": [""]
+        },
+        {"tag": "ürün_tanıtımı",
+         "patterns": ["ürün hakkında bilgi almak istiyorum", "Ürünün özellikleri neler?", "ürünün fiyatı ne kadar?", "ürün hakkında neler söyleyebilirsiniz", "ürünü neden satın almalıyım?" ],
+         "responses": ["Hangi üründen bahsediyorsunuz kodunu alabilir miyim", "Ürün kodu?"],
+         "context": ["ürünü_arama"]
+        },
+        {"tag": "ürünü_arama",
+         "patterns": [],
+         "responses": ["Ürün ilgili sayfaya yönlendiriliyorsunuz"],
+         "context": [""]
+        },
+        {"tag": "kargo_takip",
+         "patterns": ["kargom nerede?", "kargomun konumu", "kargom kaç güne gelir?", "kargom ne zaman elime ulaşır", "kargo dağıtıma çıktımı" ],
+         "responses": ["Kargo takip numaranızı alabilir miyim?","Kargo takip no?"],
+         "context": ["kargoyu_bul"]
+        },
+        {"tag": "kargoyu_bul",
+         "patterns": [],
+         "responses": ["Kargo detayları sayfasına yönlendiriliyorsunuz"],
+         "context": [""]
+        },
+        {"tag": "ürün_iptali",
+         "patterns": ["siparişimi iptal etmek istiyorum", "sipariş iptali", "ürün iptali", "satın alımı iptal etmek istiyorum" ],
+         "responses": ["Lütfen sipariş numaranızı girin", "Sipariş numaranız nedir?"],
+         "context": ["siparişe_git"]
+        },
+        {"tag": "siparişe_git",
+         "patterns": [],
+         "responses": ["Sipariş iptali sayfasına iletiliyorsunuz."],
+         "context": [""]
+        }
+   ]
+}
